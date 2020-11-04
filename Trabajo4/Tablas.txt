@@ -1,0 +1,151 @@
+aclaracion: como la palabra index es una palabra 
+reservada de sql, le cambie el nombre a la columna
+index por indice para mayor facilidad
+
+
+CREATE TABLE TRANSACCION(
+block_id VARCHAR2(150),
+indice VARCHAR2(150),
+hash VARCHAR2(150),
+time VARCHAR2(20),
+failed VARCHAR2(150),
+type VARCHAR2(150),
+sender VARCHAR2(150),
+recipient VARCHAR2(150),
+call_count VARCHAR2(150),
+value VARCHAR2(150),
+value_usd VARCHAR2(150),
+internal_value VARCHAR2(150),
+internal_value_usd VARCHAR2(150),
+fee VARCHAR2(150),
+fee_usd VARCHAR2(150),
+gas_used VARCHAR2(150),
+gas_limit VARCHAR2(150),
+gas_price VARCHAR2(150),
+input_hex VARCHAR2(150),
+nonce VARCHAR2(150),
+v VARCHAR2(150),
+r VARCHAR2(150),
+s VARCHAR2(150),
+x VARCHAR2(150),
+y VARCHAR2(150)
+);
+
+----------------------------
+parte del sql loader.
+$sqlldr control = C:\Users\ricardo\Desktop\Trabajo4\Transacciones.ctl log = C:\Users\ricardo\Desktop\Trabajo4\Hola.log userid = ricardo/123
+----------------------------
+load data
+infile 'C:\Users\ricardo\Desktop\Trabajo4\MuestraTransacciones.csv'
+into table TRANSACCION
+FIELDS TERMINATED BY ";" TRAILING NULLCOLS
+( block_id,
+  indice,
+  hash,
+  time,
+  failed,
+  type,
+  sender,
+  recipient,
+  call_count,
+  value,
+  value_usd,
+  internal_value,
+  internal_value_usd,
+  fee,
+  fee_usd,
+  gas_used,
+  gas_limit,
+  gas_price,
+  input_hex,
+  nonce,
+  v,
+  r,
+  s,
+  x,
+  y)
+
+--------------------------------------------
+-como size es una palabra reservaa de sql, decidimos utlizar el atribuo llamado tamanio
+CREATE TABLE BLOQUE(
+id VARCHAR2(150),
+hash VARCHAR2(150),
+time VARCHAR2(150),
+tamanio VARCHAR2(150),
+miner VARCHAR2(150),
+extra_data_hex VARCHAR2(150),
+dificult VARCHAR2(150),
+gas_used VARCHAR2(150),
+gas_limit VARCHAR2(150),
+logs_bloom BLOB,
+mix_hash VARCHAR2(150),
+nonce VARCHAR2(150),
+receipts_root VARCHAR2(150),
+sha3_uncles VARCHAR2(150),
+state_root VARCHAR2(150),
+total_difficulty VARCHAR2(150),
+transactions_root VARCHAR2(150),
+uncle_count VARCHAR2(150),
+transaction_count VARCHAR2(150),
+synthetic_transaction_count VARCHAR2(150),
+call_count VARCHAR2(150),
+synthentic_call_count VARCHAR2(150),
+value_total VARCHAR2(150),
+value_total_usd VARCHAR2(150),
+internal_value_total VARCHAR2(150),
+internal_value_total_usd VARCHAR2(150),
+generation VARCHAR2(150),
+generation_usd VARCHAR2(150),
+uncle_generation VARCHAR2(150),
+uncle_generation_usd VARCHAR2(150),
+fee_total VARCHAR2(150),
+fee_total_usd VARCHAR2(150),
+reward VARCHAR2(150),
+reward_usd VARCHAR2(150)
+);
+
+----------------------------
+parte del sql loader.
+$sqlldr control = C:\Users\ricardo\Desktop\Trabajo4\Bloques.ctl log = C:\Users\ricardo\Desktop\Trabajo4\Hola.log userid = ricardo/123
+----------------------------
+load data
+infile 'C:\Users\ricardo\Desktop\Trabajo4\MuestraBloques.csv'
+into table BLOQUE
+FIELDS TERMINATED BY ";" TRAILING NULLCOLS
+( id ,
+hash ,
+time ,
+tamanio ,
+miner ,
+extra_data_hex ,
+dificult ,
+gas_used ,
+gas_limit ,
+logs_bloom ,
+mix_hash ,
+nonce ,
+receipts_root ,
+sha3_uncles ,
+state_root ,
+total_difficulty ,
+transactions_root ,
+uncle_count ,
+transaction_count ,
+synthetic_transaction_count ,
+call_count ,
+synthentic_call_count ,
+value_total ,
+value_total_usd ,
+internal_value_total ,
+internal_value_total_usd ,
+generation ,
+generation_usd ,
+uncle_generation ,
+uncle_generation_usd ,
+fee_total ,
+fee_total_usd ,
+reward ,
+reward_usd 
+)
+
+--------------------------------------------

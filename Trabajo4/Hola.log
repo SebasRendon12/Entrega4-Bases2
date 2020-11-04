@@ -1,0 +1,82 @@
+
+SQL*Loader: Release 11.2.0.2.0 - Production on Mié Nov 4 17:37:38 2020
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   C:\Users\ricardo\Desktop\Trabajo4\Bloques.ctl
+Data File:      C:\Users\ricardo\Desktop\Trabajo4\MuestraBloques.csv
+  Bad File:     C:\Users\ricardo\Desktop\Trabajo4\MuestraBloques.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table BLOQUE, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID                                  FIRST     *   ;       CHARACTER            
+HASH                                 NEXT     *   ;       CHARACTER            
+TIME                                 NEXT     *   ;       CHARACTER            
+TAMANIO                              NEXT     *   ;       CHARACTER            
+MINER                                NEXT     *   ;       CHARACTER            
+EXTRA_DATA_HEX                       NEXT     *   ;       CHARACTER            
+DIFICULT                             NEXT     *   ;       CHARACTER            
+GAS_USED                             NEXT     *   ;       CHARACTER            
+GAS_LIMIT                            NEXT     *   ;       CHARACTER            
+LOGS_BLOOM                           NEXT     *   ;       CHARACTER            
+MIX_HASH                             NEXT     *   ;       CHARACTER            
+NONCE                                NEXT     *   ;       CHARACTER            
+RECEIPTS_ROOT                        NEXT     *   ;       CHARACTER            
+SHA3_UNCLES                          NEXT     *   ;       CHARACTER            
+STATE_ROOT                           NEXT     *   ;       CHARACTER            
+TOTAL_DIFFICULTY                     NEXT     *   ;       CHARACTER            
+TRANSACTIONS_ROOT                    NEXT     *   ;       CHARACTER            
+UNCLE_COUNT                          NEXT     *   ;       CHARACTER            
+TRANSACTION_COUNT                    NEXT     *   ;       CHARACTER            
+SYNTHETIC_TRANSACTION_COUNT          NEXT     *   ;       CHARACTER            
+CALL_COUNT                           NEXT     *   ;       CHARACTER            
+SYNTHENTIC_CALL_COUNT                NEXT     *   ;       CHARACTER            
+VALUE_TOTAL                          NEXT     *   ;       CHARACTER            
+VALUE_TOTAL_USD                      NEXT     *   ;       CHARACTER            
+INTERNAL_VALUE_TOTAL                 NEXT     *   ;       CHARACTER            
+INTERNAL_VALUE_TOTAL_USD             NEXT     *   ;       CHARACTER            
+GENERATION                           NEXT     *   ;       CHARACTER            
+GENERATION_USD                       NEXT     *   ;       CHARACTER            
+UNCLE_GENERATION                     NEXT     *   ;       CHARACTER            
+UNCLE_GENERATION_USD                 NEXT     *   ;       CHARACTER            
+FEE_TOTAL                            NEXT     *   ;       CHARACTER            
+FEE_TOTAL_USD                        NEXT     *   ;       CHARACTER            
+REWARD                               NEXT     *   ;       CHARACTER            
+REWARD_USD                           NEXT     *   ;       CHARACTER            
+
+value used for ROWS parameter changed from 64 to 29
+
+Table BLOQUE:
+  35 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 254388 bytes(29 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            35
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Mié Nov 04 17:37:38 2020
+Run ended on Mié Nov 04 17:37:38 2020
+
+Elapsed time was:     00:00:00.07
+CPU time was:         00:00:00.01
