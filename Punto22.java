@@ -1,26 +1,19 @@
-import javax.swing.JFrame;
-
-import javafx.scene.paint.Color;
-import javafx.util.Pair;
-import oracle.net.aso.g;
-
 import java.awt.event.ActionListener;
-
-import javax.sound.sampled.SourceDataLine;
-import javax.swing.*;
-
-import java.sql.*;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
-import java.util.*;
+import java.util.TreeMap;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class Punto22 extends JFrame {
 
@@ -39,7 +32,7 @@ public class Punto22 extends JFrame {
     panel.setLayout(null); // desactivando el dise�o
     this.getContentPane().add(panel);
 
-    JLabel title = new JLabel("Ingerse numero de cuadricula:");
+    JLabel title = new JLabel("Ingrese número de cuadricula:");
     title.setBounds(50, 10, 300, 30);
     panel.add(title);
     JLabel title1 = new JLabel("la informacion se ve asi: \n [x,y,block_id,sender,recipient,values_usd,fee_usd,time]");
@@ -84,7 +77,6 @@ public class Punto22 extends JFrame {
               try {
                 parsed = format.parse(entry.getValue().get(j).split(" ")[1]);
               } catch (ParseException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
               }
               jua.add(entry.getValue().get(j - 7));
@@ -199,7 +191,7 @@ public class Punto22 extends JFrame {
               } else {
                 parsed = (float) Integer.parseInt(entry.getValue().get(j).replace(".", ""));
               }
-              
+
               jua.add(entry.getValue().get(j - 6));
               jua.add(entry.getValue().get(j - 5));
               jua.add(entry.getValue().get(j - 4));
