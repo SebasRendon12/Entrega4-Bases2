@@ -1,17 +1,17 @@
 public class conexion {
-  private final String Nombre_PC = "DESKTOP-NF5GC4E";
-  private final String usuario = "ricardo";
-  private final String contraseña = "123";
+  public static String Nombre_PC = "DESKTOP-NF5GC4E";
+  public static String usuario = "ricardo";
+  public static String contraseña = "123";
 
-  public String getConn() {
+  public static String getConn() {
     return "jdbc:oracle:thin:@" + Nombre_PC + ":1521:xe";
   }
 
-  public String getUser() {
+  public static String getUser() {
     return usuario;
   }
 
-  public String getPass() {
+  public static String getPass() {
     return contraseña;
   }
 }

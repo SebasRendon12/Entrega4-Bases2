@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.*;
 
 public class Punto1 extends JFrame {
 
@@ -11,6 +12,11 @@ public class Punto1 extends JFrame {
   }
 
   private void iniciarComponentes() {
-
+    JPanel panel = new JPanel();
+    panel.setLayout(null); // desactivando el dise�o
+    this.getContentPane().add(panel);
+    JLabel title = new JLabel("Esta Parte Se Hace a mano :v");
+    title.setBounds(200, 10, 300, 30);
+    panel.add(title);
   }
 }
