@@ -4,6 +4,18 @@ import java.awt.event.ActionListener;
 public class MenuPrincipal extends JFrame {
 
   private static final long serialVersionUID = 1L;
+  public static String userName = "";
+  public static String hash = "";
+
+  public static void setCurrent(String nom, String dir) {
+    userName = nom;
+    hash = dir;
+  }
+
+  public static String[] getCurrent() {
+    String[] lst = { userName, hash };
+    return lst;
+  }
 
   public MenuPrincipal(String titulo) {
     super(titulo); // titulo de la ventana
@@ -57,8 +69,13 @@ public class MenuPrincipal extends JFrame {
     ActionListener oyenteDeAccion2 = new ActionListener() {
       @Override
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        Punto5 puntos = new Punto5("Tercer punto");
-        puntos.setVisible(true);
+        if (userName.isEmpty() && hash.isEmpty()) {
+          Punto5 puntos = new Punto5("Tercer punto", false);
+          puntos.setVisible(true);
+        } else {
+          Punto3 puntos = new Punto3("Tercer punto");
+          puntos.setVisible(true);
+        }
       }
     };
     boton3.addActionListener(oyenteDeAccion2);
@@ -73,7 +90,7 @@ public class MenuPrincipal extends JFrame {
     ActionListener oyenteDeAccion4 = new ActionListener() {
       @Override
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        Punto5 puntos = new Punto5("Quinto punto");
+        Punto5 puntos = new Punto5("Quinto punto", false);
         puntos.setVisible(true);
       }
     };
@@ -81,8 +98,13 @@ public class MenuPrincipal extends JFrame {
     ActionListener oyenteDeAccion5 = new ActionListener() {
       @Override
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        Punto6 puntos = new Punto6("Sexto punto");
-        puntos.setVisible(true);
+        if (userName.isEmpty() && hash.isEmpty()) {
+          Punto5 puntos = new Punto5("Sexto punto", true);
+          puntos.setVisible(true);
+        } else {
+          Punto6 puntos = new Punto6("Sexto punto");
+          puntos.setVisible(true);
+        }
       }
     };
     boton6.addActionListener(oyenteDeAccion5);
