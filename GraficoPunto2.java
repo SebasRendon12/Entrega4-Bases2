@@ -1,28 +1,12 @@
 import java.awt.Color;
 import java.awt.Graphics;
-import java.rmi.server.SocketSecurityException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import javax.sound.sampled.SourceDataLine;
-import javax.sql.rowset.spi.SyncFactoryException;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
-import org.apache.http.impl.io.SocketOutputBuffer;
-
-import javafx.scene.control.TableColumn.SortType;
 import javafx.util.Pair;
 
 public class GraficoPunto2 extends JFrame {
@@ -160,7 +144,7 @@ public class GraficoPunto2 extends JFrame {
       g.drawLine(i, 50, i, y);
     g.drawLine(50, 651, x, 651);
     g.drawLine(651, 50, 651, y);
-    Punto22 datos = new Punto22("hola",transaccionesdatos);
+    Punto22 datos = new Punto22("hola", transaccionesdatos);
     datos.setVisible(true);
   }
 }

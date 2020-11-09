@@ -81,8 +81,7 @@ public class Punto5 extends JFrame {
                 return;
               }
               try {
-                conexion connection = new conexion();
-                conn = DriverManager.getConnection(connection.getConn(), connection.getUser(), connection.getPass());
+                conn = DriverManager.getConnection(conexion.getConn(), conexion.getUser(), conexion.getPass());
                 sentencia = conn.createStatement();
               } catch (SQLException err) {
                 JOptionPane.showMessageDialog(null, "No hay conexión con la base de datos.");
@@ -172,8 +171,7 @@ public class Punto5 extends JFrame {
                   return;
                 }
                 try {
-                  conexion connection = new conexion();
-                  conn = DriverManager.getConnection(connection.getConn(), connection.getUser(), connection.getPass());
+                  conn = DriverManager.getConnection(conexion.getConn(), conexion.getUser(), conexion.getPass());
                   sentencia = conn.createStatement();
                 } catch (SQLException err) {
                   JOptionPane.showMessageDialog(null, "No hay conexión con la base de datos.");

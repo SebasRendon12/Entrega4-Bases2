@@ -37,13 +37,13 @@ public class MenuPrincipal extends JFrame {
     JButton boton2 = new JButton("Segundo punto");
     boton2.setBounds(310, 60, 200, 40);
     panel.add(boton2);
-    JButton boton3 = new JButton("ZUBLIME punto");
+    JButton boton3 = new JButton("Tercer punto");
     boton3.setBounds(40, 110, 200, 40);
     panel.add(boton3);
-    JButton boton4 = new JButton("Tercer punto");
+    JButton boton4 = new JButton("Cuarto punto");
     boton4.setBounds(310, 110, 200, 40);
     panel.add(boton4);
-    JButton boton5 = new JButton("Quinto punto");
+    JButton boton5 = new JButton("Iniciar sesión");
     boton5.setBounds(40, 160, 200, 40);
     panel.add(boton5);
     JButton boton6 = new JButton("Sexto punto");
@@ -82,7 +82,7 @@ public class MenuPrincipal extends JFrame {
     ActionListener oyenteDeAccion3 = new ActionListener() {
       @Override
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        Punto3 puntos = new Punto3("Tercer punto");
+        Punto4 puntos = new Punto4("Cuarto punto");
         puntos.setVisible(true);
       }
     };

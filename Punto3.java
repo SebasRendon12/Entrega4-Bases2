@@ -1,25 +1,24 @@
-import javax.swing.JFrame;
-
-import javafx.scene.paint.Color;
-import javafx.util.Pair;
-import oracle.net.aso.g;
-
 import java.awt.event.ActionListener;
-
-import javax.sound.sampled.SourceDataLine;
-import javax.swing.*;
-
-import java.sql.*;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import javafx.util.Pair;
 
 public class Punto3 extends JFrame {
 
@@ -106,7 +105,6 @@ public class Punto3 extends JFrame {
                 fechainicio = format.parse(maincra11.getText());
                 fechafinal = format.parse(maincra21.getText());
               } catch (ParseException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
               }
               if (fechainicio.compareTo(parsed) == 0) {
@@ -154,7 +152,6 @@ public class Punto3 extends JFrame {
                 fechainicio = format.parse(maincra11.getText());
                 fechafinal = format.parse(maincra21.getText());
               } catch (ParseException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
               }
               if (fechainicio.compareTo(parsed) == 0) {

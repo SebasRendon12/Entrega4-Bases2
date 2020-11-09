@@ -50,6 +50,8 @@ public class Punto4 extends JFrame {
     multichain-cli bdchain sendassetfrom 13rBJDkSC5z6HZqYswAkNM1w2J2LgkBhENogX1 191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4 bdcoin 100
     multichain-cli bdchain getaddressbalances 191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4 // ver el balance de una wallet
     
+    13rBJDkSC5z6HZqYswAkNM1w2J2LgkBhENogX1
+    191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4
     */
   }
 }

@@ -1,31 +1,31 @@
-import javax.swing.JFrame;
-
-import javafx.scene.paint.Color;
-import javafx.util.Pair;
-import oracle.net.aso.g;
-
 import java.awt.event.ActionListener;
-
-import javax.sound.sampled.SourceDataLine;
-import javax.swing.*;
-
-import java.sql.*;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import javafx.util.Pair;
 
 public class Punto2 extends JFrame {
 
   private static final long serialVersionUID = 1L;
 
-  public static Map<ArrayList<Integer>, java.awt.Color> rangocolores(Integer n, String a, String b, String c, String d,String e, String f, String g, String h, String i, String j) {
+  public static Map<ArrayList<Integer>, java.awt.Color> rangocolores(Integer n, String a, String b, String c, String d,
+      String e, String f, String g, String h, String i, String j) {
     Map<ArrayList<Integer>, java.awt.Color> colores = new HashMap<ArrayList<Integer>, java.awt.Color>();
     switch (n) {
       case 1:
@@ -939,7 +939,6 @@ public class Punto2 extends JFrame {
               }
 
             } catch (ParseException e1) {
-              // TODO Auto-generated catch block
               e1.printStackTrace();
             }
             // java.sql.Date sql = new java.sql.Date(parsed.getTime());
@@ -955,7 +954,7 @@ public class Punto2 extends JFrame {
         Map<ArrayList<Integer>, java.awt.Color> rangocolores = Punto2.rangocolores(Integer.parseInt(color.getText()),
             colorr1.getText(), colorr2.getText(), colorr3.getText(), colorr4.getText(), colorr5.getText(),
             colorr6.getText(), colorr7.getText(), colorr8.getText(), colorr9.getText(), colorr10.getText());
-        GraficoPunto2 DrawWindow = new GraficoPunto2(rangocolores,Integer.parseInt(tamaño.getText()),transacciones);
+        GraficoPunto2 DrawWindow = new GraficoPunto2(rangocolores, Integer.parseInt(tamaño.getText()), transacciones);
         DrawWindow.setSize(800, 800);
         DrawWindow.setResizable(false);
         DrawWindow.setLocation(200, 50);

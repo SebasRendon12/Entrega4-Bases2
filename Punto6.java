@@ -84,11 +84,15 @@ public class Punto6 extends JFrame {
           CommandManager commandManager = new CommandManager("localhost", connection.getPuerto(), "multichainrpc",
               connection.getPassword());
           result = (List<BalanceAssetGeneral>) commandManager.invoke(CommandElt.GETADDRESSBALANCES, current.hash);
-          double cant = ((List<BalanceAssetGeneral>) result).get(0).getQty();
-          System.out.println(result);
-          DecimalFormat formatea = new DecimalFormat("###,###.##");
-          JOptionPane.showMessageDialog(null, "El saldo de " + current.username + " es de " + formatea.format(cant)
-              + " " + ((List<BalanceAssetGeneral>) result).get(0).getName());
+          if (((List<BalanceAssetGeneral>) result).size() > 0) {
+            double cant = ((List<BalanceAssetGeneral>) result).get(0).getQty();
+            System.out.println(result);
+            DecimalFormat formatea = new DecimalFormat("###,###.##");
+            JOptionPane.showMessageDialog(null, "El saldo de " + current.username + " es de " + formatea.format(cant)
+                + " " + ((List<BalanceAssetGeneral>) result).get(0).getName());
+          } else {
+            JOptionPane.showMessageDialog(null, "No posee bdcoins");
+          }
         } catch (MultichainException err) {
           JOptionPane.showMessageDialog(null, err.getMessage());
         }
@@ -144,8 +148,7 @@ public class Punto6 extends JFrame {
                     return;
                   }
                   try {
-                    conn = DriverManager.getConnection(connection.getConn(), connection.getUser(),
-                        connection.getPass());
+                    conn = DriverManager.getConnection(conexion.getConn(), conexion.getUser(), conexion.getPass());
                     sentencia = conn.createStatement();
                   } catch (SQLException err) {
                     JOptionPane.showMessageDialog(null, "No hay conexión con la base de datos.");
@@ -158,7 +161,7 @@ public class Punto6 extends JFrame {
                       ToHash = resultado.getString("direccion");
                       CommandManager commandManager = new CommandManager("localhost", connection.getPuerto(),
                           "multichainrpc", connection.getPassword());
-                      Map<String, Double> basket = new HashMap();
+                      Map<String, Double> basket = new HashMap<>();
                       basket.put("bdcoin", coins);
                       result = commandManager.invoke(CommandElt.SENDFROM, current.hash, ToHash, basket);
                       System.out.println(result);
