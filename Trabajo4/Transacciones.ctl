@@ -1,5 +1,5 @@
 load data
-infile 'C:\Users\ricardo\Desktop\Trabajo4\MuestraTransacciones.csv'
+infile 'C:\Users\RENDONARTEAGA\Documents\U. Nacional\Bases de Datos 2\projects\Entrega4-Bases2\Trabajo4\MuestraTransacciones.csv'
 append
     into table TRANSACCION
 FIELDS TERMINATED BY ";" TRAILING NULLCOLS

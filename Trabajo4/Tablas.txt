@@ -33,10 +33,10 @@ y VARCHAR2(150)
 
 ----------------------------
 parte del sql loader.
-$sqlldr control = C:\Users\ricardo\Desktop\Trabajo4\Transacciones.ctl log = C:\Users\ricardo\Desktop\Trabajo4\Hola.log userid = ricardo/123
+$sqlldr control = C:\Pacho\Transacciones.ctl log = C:\Pacho\Hola.log userid = sebas/sebas123
 ----------------------------
 load data
-infile 'C:\Users\ricardo\Desktop\Trabajo4\MuestraTransacciones.csv'
+infile 'C:\Pacho\MuestraTransacciones.csv'
 into table TRANSACCION
 FIELDS TERMINATED BY ";" TRAILING NULLCOLS
 ( block_id,
@@ -106,10 +106,10 @@ reward_usd VARCHAR2(150)
 
 ----------------------------
 parte del sql loader.
-$sqlldr control = C:\Users\ricardo\Desktop\Trabajo4\Bloques.ctl log = C:\Users\ricardo\Desktop\Trabajo4\Hola.log userid = ricardo/123
+$sqlldr control = C:\Pacho\Bloques.ctl log = C:\Pacho\Hola.log userid = sebas/sebas123
 ----------------------------
 load data
-infile 'C:\Users\ricardo\Desktop\Trabajo4\MuestraBloques.csv'
+infile 'C:\Pacho\MuestraBloques.csv'
 into table BLOQUE
 FIELDS TERMINATED BY ";" TRAILING NULLCOLS
 ( id ,

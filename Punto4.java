@@ -31,7 +31,7 @@ public class Punto4 extends JFrame {
     multichaind bdchain -daemon // Prender el demonio de multichain
     ----------- Para los permisos ------------- 
     multichain-cli bdchain grant [direccion] [permiso]
-    multichain-cli bdchain grant 191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4 connect,send,receive // Permisos para las assets
+    multichain-cli bdchain grant 1HVttGchPBG4vipQAzLgWK3fWWq4wamfqmLJRx connect,send,receive // Permisos para las assets
     multichain-cli bdchain create stream stream1 "{\"restrict\":\"write\"}" // creamos el stream1 con restric: write
     multichain-cli bdchain subscribe stream1 // Nos suscribimos al stream1 para poder leer los datos
     -------------- publicar un json --------------
@@ -40,15 +40,15 @@ public class Punto4 extends JFrame {
     ------------------ Asset --------------------------
     multichain-cli bdchain getaddresses // Obtenemos la direccion del nodo
     multichain-cli bdchain getnewaddress // Obtenemos una nueva direccion en el mismo nodo
-    multichain-cli bdchain issue 1DJmKFwANEgg8DFoqhmbc7n7YFQviN1aZmVEYH bdcoin 1000000 0.01 //  creacion del asset bdcoin 
+    multichain-cli bdchain issue 1HVttGchPBG4vipQAzLgWK3fWWq4wamfqmLJRx bdcoin 1000000 0.01 //  creacion del asset bdcoin 
     
-    1DJmKFwANEgg8DFoqhmbc7n7YFQviN1aZmVEYH <- hash origen de bdchain
+    1HVttGchPBG4vipQAzLgWK3fWWq4wamfqmLJRx <- hash origen de bdchain
 
     --------------- Comandos para los assets/wallet ------------------
     multichain-cli bdchain gettotalbalances // Para ver el total de activos en el nodo
     multichain-cli bdchain sendasset 1V5NSENuLm7kMF7TGuiVuVeyXQ9wBe5euTGwq5 bdcoin 100 // mandar assets a otra wallet
     multichain-cli bdchain sendassetfrom 13rBJDkSC5z6HZqYswAkNM1w2J2LgkBhENogX1 191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4 bdcoin 100
-    multichain-cli bdchain getaddressbalances 191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4 // ver el balance de una wallet
+    multichain-cli bdchain getaddressbalances 1HVttGchPBG4vipQAzLgWK3fWWq4wamfqmLJRx // ver el balance de una wallet
     
     13rBJDkSC5z6HZqYswAkNM1w2J2LgkBhENogX1
     191u2b64BbAnbfXR2Z96NJwweMVeB4LJCQ8iA4
